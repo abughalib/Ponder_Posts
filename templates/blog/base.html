@@ -5,7 +5,7 @@
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,10 +26,10 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'blog-home' %}">Ponder Post</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div class="collapse navbar-collapse nav-links" id="navbarNav">
         <div class="navbar-nav navbar-left">
@@ -52,35 +52,14 @@
   </nav>
 </header>
 <main role="main" class="container">
-  <div class="row">
-    <div class="col-md-8">
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">
-            {{ message }}
-          </div>
-        {% endfor %}
-      {% endif %}
-      {% block content %}{% endblock %}
-    </div>
-    <div class="col-md-4">
-      <div class="content-section">
-        <h3>Info</h3>
-        <p class='text-muted'></p>
-        <ul class="list-group">
-          <li class="list-group-item list-group-item-light">
-            <h3>Latest Posts</h3>
-            <ul>
-              <li></li>
-            </ul>
-          </li>
-          <li class="list-group-item list-group-item-light">Announcements</li>
-          <li class="list-group-item list-group-item-light">Calendars</li>
-          <li class="list-group-item list-group-item-light">etc</li>
-        </ul>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">
+        {{ message }}
       </div>
-    </div>
-  </div>
+    {% endfor %}
+  {% endif %}
+  {% block content %}{% endblock %}
 </main>
 
 
@@ -94,6 +73,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 
 </script>
-
+<footer class="footer">
+  <p>Express your views and let the world now</p>
+  <a href="{% url 'terms-of-uses' %}">Terms of Uses</a>
+</footer>
 </body>
 </html>

@@ -70,3 +70,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+
+def terms_of_uses(request):
+    return render(request, 'blog/terms_of_uses.html', {'title': 'Terms of Uses'})

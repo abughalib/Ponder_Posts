@@ -1,7 +1,7 @@
 body {
   background: #fafafa;
   color: #333333;
-  margin-top: 5rem;
+  margin: 100px 5%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +26,10 @@ ul {
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
+}
+
+.container{
+  min-height: 100vh;
 }
 
 .content-section {
@@ -89,6 +93,15 @@ a.article-title:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  background-color: #f3f3f3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
 }
 
 @media screen and (max-width: 991px) {
