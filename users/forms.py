@@ -19,8 +19,17 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = ['username', 'email']
 
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'})
+        }
+
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+
+        widgets = {
+            'image': forms.FileInput(attrs={'class': 'form-control'})
+        }

@@ -13,11 +13,11 @@ ul {
 }
 
 .bg-steel {
-  background-color: #138a1b;
+  background-color: #313030;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #51bddb;
+  color: #00f9ff;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -31,18 +31,20 @@ ul {
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .article-title {
   color: #444444;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 a.article-title:hover {
-  color: #2bca00;
-  text-decoration: none;
+  color: #2607b3;
+  text-decoration: underline;
 }
 
 .article-content {
@@ -81,4 +83,26 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+  .navbar-left {
+    width: 57px;
+  }
+  .navbar-right {
+    margin: 0;
+    padding: 0;
+  }
 }
