@@ -1,6 +1,4 @@
-# Django Blog Application
-
-For preview -> [goto preview folder](preview/)
+# Ponder Post (Blog Application)
 
 ## Features
  * Create Blog Post<br>
