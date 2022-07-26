@@ -9,15 +9,15 @@
 
 ### Requirement<br>
 **python 3.6 or higher** <br>
-```
-pip install django
-pip install pillow
-pip install django-crispy-forms
+```bash
+python -m pip install -r requirements.txt
 ```
 
 ### Run Application <br>
   
-  `python manage.py runserver`
+```bash
+python manage.py runserver
+```
 
 ## Change the following <br>
 
@@ -25,7 +25,7 @@ SECRET KEY in settings.py
 
 **To use password reset using email**
 
-```
+```bash
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
